@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"],
+    beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -16,7 +16,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"],
+    beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -25,7 +25,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"],
+    beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -34,7 +34,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"],
+    beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -43,7 +43,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/paz_y_salvos_crud/controllers:SemaforoController"],
+    beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"] = append(beego.GlobalControllerRouter["github.com/aalejoz25/paz_y_salvos_crud/controllers:SemaforoController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
