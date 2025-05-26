@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os" // <- nuevo
+
 	_ "github.com/aalejoz25/paz_y_salvos_crud/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -20,17 +22,18 @@ func main() {
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 	}
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
-		AllowOrigins: []string{"*"},
-		AllowMethods: []string{"PUT", "PATCH", "GET", "POST", "OPTIONS", "DELETE"},
-		AllowHeaders: []string{"Origin", "x-requested-with",
-			"content-type",
-			"accept",
-			"origin",
-			"authorization",
-			"x-csrftoken"},
+		AllowOrigins:     []string{"*"},
+		AllowMethods:     []string{"PUT", "PATCH", "GET", "POST", "OPTIONS", "DELETE"},
+		AllowHeaders:     []string{"Origin", "x-requested-with", "content-type", "accept", "origin", "authorization", "x-csrftoken"},
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
 
-	beego.Run()
+	// ===== Lectura del puerto desde la variable de entorno =====
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // fallback para desarrollo local
+	}
+	// Ejecuta Beego en ":<PORT>"
+	beego.Run(":" + port)
 }
