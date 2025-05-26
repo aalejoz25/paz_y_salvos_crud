@@ -8,10 +8,8 @@
 package routers
 
 import (
-	"github.com/udistrital/paz_y_salvos_crud/controllers"
-	// _ "github.com/udistrital/paz_y_salvos_crud/ontrollers"
-
 	"github.com/astaxie/beego"
+	"github.com/udistrital/paz_y_salvos_crud/controllers"
 )
 
 func init() {

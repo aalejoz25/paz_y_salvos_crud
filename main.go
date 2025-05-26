@@ -10,7 +10,11 @@ import (
 
 func main() {
 	orm.Debug = true
-	orm.RegisterDataBase("default", "postgres", beego.AppConfig.String("sqlconn"))
+
+	err := orm.RegisterDataBase("default", "postgres", beego.AppConfig.String("sqlconn"))
+	if err != nil {
+		panic("Error registrando la BD: " + err.Error())
+	}
 	if beego.BConfig.RunMode == "dev" {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
