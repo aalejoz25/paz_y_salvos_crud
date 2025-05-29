@@ -3,11 +3,11 @@ package main
 import (
 	"os" // <- nuevo
 
-	_ "github.com/aalejoz25/paz_y_salvos_crud/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/plugins/cors"
 	_ "github.com/lib/pq"
+	_ "github.com/udistrital/paz_y_salvos_crud/routers"
 )
 
 func main() {

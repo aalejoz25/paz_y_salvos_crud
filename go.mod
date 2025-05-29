@@ -1,4 +1,4 @@
-module github.com/aalejoz25/paz_y_salvos_crud
+module github.com/udistrital/paz_y_salvos_crud
 
 go 1.22.0
 
